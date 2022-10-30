@@ -25,11 +25,15 @@ my_favorite_songs = [
 x = randint(0,8)
 y = randint(0,8)
 z = randint(0,8)
+
+
 if y == x:
-    y  = randint(0,8)
-z = randint(0,8)
+    while y==x:
+        y = randint(0,8)
+
 if z == x or z == y:
-    z = randint(0,8)
+    while z == x or z == y:
+       z = randint(0,8)
 
 print("Треки:",x+1,'+',y+1,'+',z+1)
 result_time = my_favorite_songs[x][1]+my_favorite_songs[y][1]+my_favorite_songs[z][1]

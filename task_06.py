@@ -3,7 +3,7 @@
 # Распечатайте общее время звучания трех случайных песен
 # Вывод: Три песни звучат ХХХ минут.
 
-
+from random import randint
 
 
 my_favorite_songs = {
@@ -18,5 +18,15 @@ my_favorite_songs = {
     'In This World': 4.02,
 }
 
-times = my_favorite_songs['A Sorta Fairytale']+ my_favorite_songs['In This World'] + my_favorite_songs['Waste a Moment']
-print("Три песни звучат:", times,"минут")
+t=[] 
+for i,x in my_favorite_songs.items():
+   t.append(x)
+i = 3 
+times = 0  
+while i > 0:   
+    rand = randint(1,8)
+    print(rand)
+    times += t[rand]
+    i-=1
+#   times = my_favorite_songs['A Sorta Fairytale']+ my_favorite_songs['In This World'] + my_favorite_songs['Waste a Moment']
+print("Три песни звучат:", round(times,2),"минут")

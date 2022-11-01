@@ -11,10 +11,15 @@
 # Итого размер населения - ХХ человек
 
 
-city = ['Moscow', 'Nizhny Novgorod', 'St. Petersburg', 'Volgograd']
-#city = [['Moscow',12000], ['Nizhny Novgorod',2300], ['St. Petersburg',5300], ['Volgograd',1000]]
-#print(city)
-population = [12000,1300,5300,1000]
+from turtle import end_fill
+
+
+city = ('Moscow', 'Nizhny Novgorod', 'St. Petersburg', 'Volgograd')
+print('Крупные города России:',end = ' ')
+for i in city:
+  print(i, end = ' ')
+print()  
+population = (12000,1300,5300,1000)
 #population = [[city[0],12000],[city[1],1300],[city[2],5300],[city[3],1000] ]
 # #print(population)
 size = [
@@ -26,6 +31,6 @@ size = [
 
 #result = f"{city}\n{population}\n{size}"
 #print(result)
-print("Население",city[1],"-",population[1],"человек.")
+print("Численность населения ",city[1],"-",population[1],"человек.")
 x = population[0]+population[1]+population[2]+population[3]
-print("Итого размер населения:",x,"человек.")
+print("Итого численность населения всех городов:",x,"человек.")

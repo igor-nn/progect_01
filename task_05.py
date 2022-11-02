@@ -19,4 +19,4 @@ while x <= 11:
     x += 1
     #print(int(expenses))
 
-print("Необходимо взять в дог",round(dept,2), "рублей")
+print("Необходимо взять в дог:",round(dept,2), "рублей")

@@ -35,24 +35,48 @@ sales = {
 #         подсчет количества товара
 #         подсчет стоимости товара
 #     вывод на консоль количества и стоимости товара на складе
-try:
-     product = input("Введите наименование товара:")
+#------------------------------------------------------------------
 
+def warehouse():  # общий подсчёт
+  quantity = 0
+  price = 0
+  for product, article in titles.items():
+    #print(article)
+    for i in sales[article]:
+        quantity += i['quantity']
+        price += i['price']
+    print(f'Товар: {product} - {quantity} шт, на сумму: {price} руб.')
+    quantity = 0
+    price = 0   
+
+
+def search(product): # подсчёт конкретного товара
+  try:
      article = titles[product]
-     print(article)
-
-     
-# print(sales[article][1]['quantity'])
-
+     #print(article)
      quantity = 0
-     for i in sales[article]:
-         quantity += i['quantity']
-
      price = 0
      for i in sales[article]:
+         quantity += i['quantity']
          price += i['price']
-
      print(f'{product} - {quantity} шт, на сумму {price} руб')
 
-except KeyError:
+  except KeyError:
      print('Такого товара не существует!')
+
+print('Поиск конкретного товара - нажать: 1 \n Общий  подсчёт - нажать: 2') 
+try:    
+   x = input()
+   x = int(x)
+   if x == 1:
+     product_search = input("Введите наименование товара:")
+     search(product_search)
+   elif x == 2:
+     warehouse()
+   else:
+     print("Не корректный ввод") 
+except  ValueError:
+    print("Не корректный ввод") 
+
+
+# ------------------------------------------------------------

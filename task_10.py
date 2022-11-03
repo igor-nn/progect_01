@@ -1,15 +1,21 @@
 
 # ----------- накопления сотрудника за 12 месяцев
 
-salary = float(input("Какая зарплата у сотрудника?"))
-expenses = salary
-savings = 0
+salary = input("Какая зарплата у сотрудника?")
+savings = 0 # накопления
 montch =11
-while  montch > 0:  
-   salary += (salary*5/100)
-   remains = salary - expenses
-   savings += remains
-   montch -= 1
-   print(f'зарплата-{salary}, растраты - {expenses}, накопления - {savings}')
+try:
+  salary = float(salary)
+  expenses = salary
+ 
+  while  montch > 0:  
+    salary += (salary*5/100)
+    remains = salary - expenses
+    savings += remains
+    montch -= 1
+    #print(f'зарплата-{salary}, растраты - {expenses}, накопления - {savings}')
+    
+except:
+  print("Не корректный ввод")    
 
-print("За год сотрудник накопит:",round(savings,2), "рублей")  
+print("За год сотрудник накопит:",round(savings,2), "рублей") 

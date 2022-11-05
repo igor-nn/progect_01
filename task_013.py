@@ -71,17 +71,14 @@ try:
   exits = True # для выхода из калькулятора
   while True: 
       if n:
-        print('Вводите без пробелов: первое число знак операции и второе число')
+        print('Вводите без пробелов: первое число, следом знак операции и второе число')
         print('для выхода - нажмите любую букву!')
       number1,number2,oper = Inputs()
       if not exits:
         print('Выход')
         break  
       print(f' Ответ: {operator(number1,number2,oper)}')
-      n = False
-      
-    
-    
+      n = False   
 except:
       print("Не корректный ввод!")
       

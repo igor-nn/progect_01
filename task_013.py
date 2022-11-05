@@ -14,8 +14,8 @@ def operator(x,y,char): # непосредственно калькулятор
         else:
             print("Деление на ноль запрещено!")     
     elif char == '%':
-        p = (x * y) /100
-        z = int(p)
+        z = (x * y) /100
+        #z = int(p)
     elif char == '**':
         z = x ** y 
     elif char == '//':

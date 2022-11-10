@@ -41,5 +41,5 @@ x = tabl.content[0][0]
 tabl.replacement(x,"Vanya", "Porche")
 print("Замена участника №", x)
 tabl.prinrf()
-print("Кол-во участников:  ",tabl.row)
+print("Кол-во участников: ",tabl.row)
 del tabl     

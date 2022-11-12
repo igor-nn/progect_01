@@ -38,3 +38,12 @@ if z == x or z == y:
 print("Треки:",x+1,'+',y+1,'+',z+1)
 result_time = my_favorite_songs[x][1]+my_favorite_songs[y][1]+my_favorite_songs[z][1]
 print("Три песни звучат:", round(result_time,2), "минут")
+
+# Вот вариант покороче
+# Решение 2
+time = 0
+for song in sample(my_favorite_songs, 3):
+    print(song[0])
+    time += song[1]
+
+print(f'Три песни звучат {round(time, 2)}')

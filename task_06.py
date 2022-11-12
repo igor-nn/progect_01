@@ -30,3 +30,5 @@ while i > 0:
     i-=1
 #   times = my_favorite_songs['A Sorta Fairytale']+ my_favorite_songs['In This World'] + my_favorite_songs['Waste a Moment']
 print("Три песни звучат:", round(times,2),"минут")
+
+# Хорошо!

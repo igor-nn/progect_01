@@ -16,3 +16,5 @@ else:
   month -= 1
   #print(list_month_day[month])
   print(f'В {month+1} месяце {day[month]} дней')
+  
+#   Хорошо. Вот еще вариант решения!

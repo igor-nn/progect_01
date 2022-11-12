@@ -16,3 +16,14 @@ else:
   month -= 1
   #print(list_month_day[month])
   print(f'В {month+1} месяце {day[month]} дней')
+  
+
+# Решение 2
+import calendar as cl  # используем модуль для получения функции
+
+year_input = input("Введите год: ")
+month_input = input("Введите номер месяца: ")
+
+year = int(year_input)
+month_ = int(month_input)
+print(cl.monthrange(year, month_))

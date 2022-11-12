@@ -20,3 +20,5 @@ while x <= 11:
     #print(int(expenses))
 
 print("Необходимо взять в дог:",round(dept,2), "рублей")
+
+# Отлично!

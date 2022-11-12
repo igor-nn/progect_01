@@ -34,3 +34,19 @@ size = [
 print("Численность населения ",city[1],"-",population[1],"человек.")
 x = population[0]+population[1]+population[2]+population[3]
 print("Итого численность населения всех городов:",x,"человек.")
+
+# Ок! Отлично
+# Решение через функцию с циклом for 
+def total_sum(lst):
+    num_lst = []
+    
+    for i in lst:
+        population = i[1]
+        num_lst.append(population)
+    
+    sum_lst = sum(num_lst)
+    
+    return sum_lst
+
+population_sum_1 = total_sum(town_population)
+

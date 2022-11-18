@@ -2,6 +2,8 @@
 from tabulate import tabulate
 import sqlite3
 
+stud_id = input("введите Id студента 201, 202, 203 или 204  ")
+
 connection = sqlite3.connect('teatchers.db')
 cursor = connection.cursor()
 #-------------------------------------------------------создал--CREATE
@@ -29,12 +31,11 @@ cursor = connection.cursor()
 # connection.commit()
 #
 # -------------------------------------------SELECT
-query = """SELECT Students_Id, Students_Name, Students.School_Id, School_Name
+query = f"""SELECT Students_Id, Students_Name, Students.School_Id, School_Name 
            FROM Students 
-           LEFT JOIN School 
-           ON Students.School_Id = School.School_Id
-           WHERE Students_Id = 202
-           """
+           LEFT JOIN School ON Students.School_Id = School.School_Id 
+           WHERE Students_Id = {stud_id} """
+           
 head = ("Students_Id", "Students_Name", "School_Id", "School_Name")
 
 # query = "SELECT Students_Id, Students_Name, School_Id FROM Students WHERE Students_Id = 201 "
